@@ -254,8 +254,8 @@ class AccountBankStatement(orm.Model):
                 return False
             for line in statement.line_ids:
                 if (line.period_id and
-                        statement.journal_id.company_id.id
-                        != line.period_id.company_id.id):
+                        statement.journal_id.company_id.id !=
+                        line.period_id.company_id.id):
                     return False
         return True
 
@@ -447,7 +447,7 @@ class AccountBankStatement(orm.Model):
     def get_account_for_counterpart(self, cr, uid, amount, account_receivable,
                                     account_payable):
         """For backward compatibility."""
-        account_id, type = self.get_account_and_type_for_counterpart(
+        account_id, account_type = self.get_account_and_type_for_counterpart(
             cr, uid, amount, account_receivable, account_payable)
         return account_id
 

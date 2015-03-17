@@ -108,8 +108,8 @@ class AccountBankStatement(orm.Model):
         st_line = st_line_obj.browse(cr, uid, st_line_id, context=context)
         st = st_line.statement_id
         context.update({'date': st_line.date})
-        acc_cur = (((st_line.amount <= 0)
-                    and st.journal_id.default_debit_account_id) or
+        acc_cur = (((st_line.amount <= 0) and
+                    st.journal_id.default_debit_account_id) or
                    st_line.account_id)
         context.update({
             'res.currency.compute.account': acc_cur,
@@ -184,6 +184,7 @@ class AccountBankStatement(orm.Model):
 
     def button_confirm_bank(self, cr, uid, ids, context=None):
         st_line_obj = self.pool['account.bank.statement.line']
+        move_obj = self.pool['account.move']
         if context is None:
             context = {}
         for st in self.browse(cr, uid, ids, context=context):
@@ -191,6 +192,9 @@ class AccountBankStatement(orm.Model):
                 cr, uid, ids, context=context)
             if st.profile_id.one_move and context.get('move_id', False):
                 move_id = context['move_id']
+                move = move_obj.browse(cr, uid, move_id, context=context)
+                self.create_move_transfer_lines(
+                    cr, uid, move, st, context=context)
                 self._valid_move(cr, uid, move_id, context=context)
                 lines_ids = [x.id for x in st.line_ids]
                 st_line_obj.write(cr, uid, lines_ids,
