@@ -23,7 +23,7 @@
     "name": "Easy Reconcile",
     "version": "1.3.1",
     "depends": ["account"],
-    "author": "Akretion,Camptocamp",
+    "author": "Akretion,Camptocamp,Odoo Community Association (OCA)",
     "description": """
 Easy Reconcile
 ==============
@@ -58,7 +58,9 @@ allows multiple lines and partial.
     "data": ["easy_reconcile.xml",
              "easy_reconcile_history_view.xml",
              "security/ir_rule.xml",
-             "security/ir.model.access.csv"],
+             "security/ir.model.access.csv",
+             "res_config_view.xml",
+             ],
     'license': 'AGPL-3',
     "auto_install": False,
     'installable': False,

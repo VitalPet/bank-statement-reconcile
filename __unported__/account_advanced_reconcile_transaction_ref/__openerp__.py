@@ -26,9 +26,10 @@ Reconcile rules with transaction_ref
 
 """,
  'version': '1.0.1',
- 'author': 'Camptocamp',
+ 'author': "Camptocamp,Odoo Community Association (OCA)",
  'category': 'Finance',
  'website': 'http://www.camptocamp.com',
+ 'license': 'AGPL-3',
  'depends': ['account_advanced_reconcile'],
  'data': ['easy_reconcile_view.xml'],
  'demo': [],

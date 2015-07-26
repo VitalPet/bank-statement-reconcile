@@ -21,7 +21,7 @@
 
 {'name': "Bank statement extension and profiles",
  'version': '1.3.6',
- 'author': 'Camptocamp',
+ 'author': "Camptocamp,Odoo Community Association (OCA)",
  'maintainer': 'Camptocamp',
  'category': 'Finance',
  'complexity': 'normal',
@@ -45,8 +45,8 @@
  Features:
 
  1) Improve the bank statement: allows to  define profiles (for each Office or
- Bank). The bank statement will then generate the entries based on some criteria
- chosen in the selected profile. You can setup on the profile:
+ Bank). The bank statement will then generate the entries based on some
+ criteria chosen in the selected profile. You can setup on the profile:
 
   - the journal to use
   - use balance check or not
