@@ -1,9 +1,8 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Account Statement Operation multi-company module for Odoo
-#    Copyright (C) 2015 Akretion (http://www.akretion.com)
-#    @author Alexis de Lattre <alexis.delattre@akretion.com>
+#    Copyright 2012, 2015 Camptocamp SA (Guewen Baconnier, Damien Crier)
+#    Copyright (C) 2010   Sébastien Beau
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,19 +19,8 @@
 #
 ##############################################################################
 
-
-{
-    'name': 'Account Statement Operation Multi-company',
-    'version': '8.0.0.2.0',
-    'category': 'Accounting & Finance',
-    'license': 'AGPL-3',
-    'summary': 'Fix multi-company issue on Statement Operation Templates',
-    'author': "Akretion,Odoo Community Association (OCA)",
-    'website': 'http://www.akretion.com',
-    'depends': ['account'],
-    'data': [
-        'account_view.xml',
-        'security/rule.xml',
-        ],
-    'installable': True,
-}
+from . import easy_reconcile
+from . import base_reconciliation
+from . import simple_reconciliation
+from . import easy_reconcile_history
+from . import res_config

@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Copyright 2012 Camptocamp SA (Guewen Baconnier)
-#    Copyright (C) 2010   Sébastien Beau
+#    This module copyright (C) 2015 Therp BV <http://therp.nl>.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,9 +17,4 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
-from . import easy_reconcile
-from . import base_reconciliation
-from . import simple_reconciliation
-from . import easy_reconcile_history
-from . import res_config
+from . import account_bank_statement_line

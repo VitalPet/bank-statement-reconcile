@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Copyright 2012 Camptocamp SA (Guewen Baconnier)
+#    Copyright 2012, 2015 Camptocamp SA (Guewen Baconnier, Damien Crier)
 #    Copyright (C) 2010   Sébastien Beau
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -21,48 +21,21 @@
 
 {
     "name": "Easy Reconcile",
-    "version": "1.3.1",
+    "version": "8.0.1.3.1",
     "depends": ["account"],
     "author": "Akretion,Camptocamp,Odoo Community Association (OCA)",
-    "description": """
-Easy Reconcile
-==============
-
-This is a shared work between Akretion and Camptocamp
-in order to provide:
- - reconciliation facilities for big volume of transactions
- - setup different profiles of reconciliation by account
- - each profile can use many methods of reconciliation
- - this module is also a base to create others
-   reconciliation methods which can plug in the profiles
- - a profile a reconciliation can be run manually
-   or by a cron
- - monitoring of reconciliation runs with an history
-   which keep track of the reconciled Journal items
-
-2 simple reconciliation methods are integrated
-in this module, the simple reconciliations works
-on 2 lines (1 debit / 1 credit) and do not allow
-partial reconcilation, they also match on 1 key,
-partner or Journal item name.
-
-You may be interested to install also the
-``account_advanced_reconciliation`` module.
-This latter add more complex reconciliations,
-allows multiple lines and partial.
-
-""",
     "website": "http://www.akretion.com/",
     "category": "Finance",
-    "demo_xml": [],
     "data": ["easy_reconcile.xml",
              "easy_reconcile_history_view.xml",
              "security/ir_rule.xml",
              "security/ir.model.access.csv",
              "res_config_view.xml",
              ],
+    "test": ['test/easy_reconcile.yml',
+             ],
     'license': 'AGPL-3',
     "auto_install": False,
-    'installable': False,
+    'installable': True,
 
 }

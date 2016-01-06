@@ -1,9 +1,7 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Account Statement Operation multi-company module for Odoo
-#    Copyright (C) 2015 Akretion (http://www.akretion.com)
-#    @author Alexis de Lattre <alexis.delattre@akretion.com>
+#    This module copyright (C) 2015 Therp BV <http://therp.nl>.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,20 +17,19 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
-
 {
-    'name': 'Account Statement Operation Multi-company',
-    'version': '8.0.0.2.0',
-    'category': 'Accounting & Finance',
-    'license': 'AGPL-3',
-    'summary': 'Fix multi-company issue on Statement Operation Templates',
-    'author': "Akretion,Odoo Community Association (OCA)",
-    'website': 'http://www.akretion.com',
-    'depends': ['account'],
-    'data': [
-        'account_view.xml',
-        'security/rule.xml',
-        ],
-    'installable': True,
+    "name": "Reconcile payment orders",
+    "version": "8.0.1.0.0",
+    "author": "Therp BV,"
+              "Serv. Tecnol. Avanzados - Pedro M. Baeza,"
+              "Odoo Community Association (OCA)",
+    "license": "AGPL-3",
+    "category": "Accounting & Finance",
+    "summary": "Automatically reconcile all lines from payment orders",
+    "depends": [
+        'account_banking_payment_transfer',
+    ],
+    "auto_install": False,
+    "installable": True,
+    "application": False,
 }
