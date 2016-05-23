@@ -32,7 +32,10 @@ addon | version | summary
 [account_easy_reconcile](account_easy_reconcile/) | 8.0.1.3.1 | Easy Reconcile
 [account_invoice_reference](account_invoice_reference/) | 8.0.1.0.1 | Invoices Reference
 [account_reconcile_payment_order](account_reconcile_payment_order/) | 8.0.1.0.0 | Automatically reconcile all lines from payment orders
+[account_reconcile_prepare_account](account_reconcile_prepare_account/) | 8.0.1.0.0 | Assign bank transactions to accounts before reconciliation
 [account_statement_operation_multicompany](account_statement_operation_multicompany/) | 8.0.0.2.0 | Fix multi-company issue on Statement Operation Templates
+[account_statement_operation_rule](account_statement_operation_rule/) | 8.0.1.0.0 | Bank Statement Operation Rules
+[account_statement_operation_rule_dunning_fees](account_statement_operation_rule_dunning_fees/) | 8.0.1.0.0 | Bank Statement Operation Rules with Dunning Fees
 [base_transaction_id](base_transaction_id/) | 8.0.1.0.0 | Base transaction id for financial institutes
 
 Unported addons
@@ -54,7 +57,6 @@ addon | version | summary
 [account_statement_ext_point_of_sale](account_statement_ext_point_of_sale/) | 1.0.0 (unported) | Bank statement extension and profiles for Point of Sale
 [account_statement_ext_voucher](account_statement_ext_voucher/) | 1.0 (unported) | Bank statement extension with voucher
 [account_statement_no_invoice_import](account_statement_no_invoice_import/) | 0.1 (unported) | account bank statement no invoice import
-[account_statement_ofx_import](account_statement_ofx_import/) | 1.0.1 (unported) | Bank statement OFX import
 [account_statement_one_move](account_statement_one_move/) | 0.1 (unported) | Bank statement one move
 [account_statement_regex_account_completion](account_statement_regex_account_completion/) | 0.1 (unported) | Account Statement Regex Account Completion addon
 [account_statement_so_completion](account_statement_so_completion/) | 0.1 (unported) | Bank statement Sale Order completion
